@@ -9,7 +9,7 @@ beforeAll((done) => {
 afterAll((done) => {
   server.close(done);
 });
-test('GET / should return Hello World', async()=>{
+test('GET / should return Hello World back', async()=>{
 const res= await req(server).get('/');
 expect(res.status).toBe(200);
 expect(res.text).toBe('Hello World');
